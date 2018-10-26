@@ -11,5 +11,3 @@
     - unzip
     - libyaml-dev
     - pip
-  become: yes
-  become_user: root

@@ -9,3 +9,5 @@
     - python-mysqldb
     - zip
     - unzip
+    - libyaml-dev
+    - pip

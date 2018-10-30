@@ -1,12 +1,9 @@
 ---
-# tasks file for common
-- name: Install required base packages
-  apt: name={{ item }} state=present
-  with_items:
-    - sudo
-    - curl
-    - git
-    - python-mysqldb
-    - zip
-    - unzip
-    - libyaml-dev
+
+- include_tasks: variables.yml
+
+- include_tasks: provision-alpine.yml
+  when: ansible_os_family == 'Alpine'
+
+- include_tasks: provision-debian.yml
+  when: ansible_os_family == 'Debian'

@@ -1,0 +1,32 @@
+
+# Configure variables.
+- name: Ensure apk cache is updated
+  apk: update_cache=yes
+
+- name: Ensure required base packages are installed
+  apk: name={{ item }} state=present
+  with_items: '{{ common_packages }}'
+
+- name: Ensure common groups exist
+  shell: >-
+    getent group {{ item.name }}  > /dev/null
+
+    if [ $? -eq 0 ]; then
+      exit 0
+    else
+      addgroup -g {{ item.gid }} {{ item.name }}
+    fi
+
+  with_items: '{{ common_groups }}'
+
+- name: Ensure common users exist
+  shell: >-
+    getent passwd {{ item.name }}  > /dev/null
+
+    if [ $? -eq 0 ]; then
+      exit 0
+    else
+      adduser -u {{ item.uid }} -D -S -G {{ item.group }} {{ item.name }}
+    fi
+
+  with_items: '{{ common_users }}'

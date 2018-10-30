@@ -1,0 +1,8 @@
+__common_packages:
+  - sudo
+  - curl
+  - git
+  - python-mysqldb
+  - zip
+  - unzip
+  - libyaml-dev

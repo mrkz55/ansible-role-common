@@ -1,0 +1,8 @@
+__common_users:
+  - { name: 'www-data', uid: 82, group: 'www-data' }
+
+__common_groups:
+  - { name: 'www-data', gid: 82 }
+
+__common_packages:
+  - sudo

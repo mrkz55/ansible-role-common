@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    alpine:
+        command: ["/bin/bash", "-c", "ansible-playbook /etc/ansible/playbooks/playbook.yml && sleep 9000"]
+        image: amal55/php-fpm:alpine
+        volumes:
+            - ../../ansible-role-common:/etc/ansible/roles/common
+            - ./playbook.yml:/etc/ansible/playbooks/playbook.yml

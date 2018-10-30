@@ -1,0 +1,8 @@
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: True
+  tasks:
+
+    - name: Test resty provisioning tasks
+      include_role:
+        name: common

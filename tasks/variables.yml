@@ -15,3 +15,8 @@
   set_fact:
     common_groups: "{{ __common_groups | list }}"
   when: common_groups is not defined
+
+- name: Define common_paths.
+  set_fact:
+    common_paths: "{{ __common_paths | list }}"
+  when: common_paths is not defined

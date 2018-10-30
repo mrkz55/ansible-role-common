@@ -6,3 +6,6 @@ __common_groups:
 
 __common_packages:
   - sudo
+
+__common_paths:
+  - { state: 'directory', path: '/var/www', owner: 'www-data', group: 'www-data', mode: '0755' }

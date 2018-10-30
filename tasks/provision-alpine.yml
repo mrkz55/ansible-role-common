@@ -30,3 +30,7 @@
     fi
 
   with_items: '{{ common_users }}'
+
+- name: Ensure common paths exist
+  file: '{{ item }}'
+  with_items: '{{ common_paths }}'

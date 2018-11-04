@@ -13,6 +13,9 @@ __common_groups:
 
 __common_paths:
   - { state: 'directory', path: '/var/www', owner: 'www-data', group: 'www-data', mode: '0755' }
+  - { state: 'directory', path: '/etc/ansible', owner: 'root', group: 'root', mode: '0755' }
+  - { state: 'directory', path: '/etc/ansible/roles', owner: 'root', group: 'root', mode: '0755' }
+  - { state: 'directory', path: '/etc/ansible/playbooks', owner: 'root', group: 'root', mode: '0755' }
 
 __common_configs: 
   - { src: 'ansible.cfg.j2', dest: '/etc/ansible/ansible.cfg', owner: 'root' }

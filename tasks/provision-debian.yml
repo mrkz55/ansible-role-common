@@ -1,5 +1,12 @@
 # tasks file for common
-- name: Install required base packages
+- name: Ensure common packages are installed
   apt: name={{ item }} state=present
   with_items: '{{ common_packages }}'
 
+- name: Ensure common configurations are correct
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner }}"
+  become: yes
+  with_items: '{{ common_configs }}'

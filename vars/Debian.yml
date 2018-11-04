@@ -14,3 +14,6 @@ __common_groups:
 __common_paths:
   - { state: 'directory', path: '/var/www', owner: 'www-data', group: 'www-data', mode: '0755' }
 
+__common_configs: 
+  - { src: 'ansible.cfg.j2', dest: '/etc/ansible/ansible.cfg', owner: 'root' }
+  - { src: 'vault_password.j2', dest: '/etc/ansible/.vault_password', owner: 'root' }

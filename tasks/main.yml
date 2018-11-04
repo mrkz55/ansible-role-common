@@ -2,8 +2,4 @@
 
 - include_tasks: variables.yml
 
-- include_tasks: provision-alpine.yml
-  when: ansible_os_family is 'Alpine'
-
-- include_tasks: provision-debian.yml
-  when: ansible_os_family is 'Debian'
+- include_tasks: "provision-{{ ansible_os_family }}.yml}}"

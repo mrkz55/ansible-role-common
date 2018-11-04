@@ -2,26 +2,14 @@ __common_packages:
   - sudo
   - curl
   - git
+  - python-pip
   - python-mysqldb
-  - zip
-  - unzip
-  - libyaml-dev
 
 __common_users:
   - { name: 'www-data', uid: 82, group: 'www-data' }
 
 __common_groups:
   - { name: 'www-data', gid: 82 }
-
-__common_packages:
-  - sudo
-  - curl
-  - git
-  - pip
-  - python-mysqldb
-  - zip
-  - unzip
-  - libyaml-dev
 
 __common_paths:
   - { state: 'directory', path: '/var/www', owner: 'www-data', group: 'www-data', mode: '0755' }

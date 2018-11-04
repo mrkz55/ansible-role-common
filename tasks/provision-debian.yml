@@ -11,10 +11,3 @@
   file: '{{ item }}'
   with_items: '{{ common_paths }}'
 
-- name: Ensure common configurations are correct
-  template:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    owner: "{{ item.owner }}"
-  become: yes
-  with_items: '{{ common_configs }}'

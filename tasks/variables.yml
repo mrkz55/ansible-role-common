@@ -21,11 +21,6 @@
     common_paths: "{{ __common_paths | list }}"
   when: common_paths is not defined
 
-- name: Define common_configs.
-  set_fact:
-    common_configs: "{{ __common_configs | list }}"
-  when: common_configs is not defined
-
 - name: Define common_pip_packages
   set_fact:
     common_pip_packages: "{{ __common_pip_packages | list }}"

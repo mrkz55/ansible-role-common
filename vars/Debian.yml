@@ -3,6 +3,8 @@ __common_packages:
   - curl
   - git
   - python-pip
+
+__common_pip_packages:
   - ansible
 
 __common_users:

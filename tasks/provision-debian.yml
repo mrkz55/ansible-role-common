@@ -3,6 +3,10 @@
   apt: name={{ item }} state=present
   with_items: '{{ common_packages }}'
 
+- name: Ensure common pip packages are installed
+  pip: name={{ item }} state=present
+  with_items: '{{ common_pip_packages }}'
+
 - name: Ensure common paths exist
   file: '{{ item }}'
   with_items: '{{ common_paths }}'

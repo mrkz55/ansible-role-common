@@ -6,4 +6,4 @@ services:
         image: amal55/php-fpm:alpine
         volumes:
             - ../../ansible-role-common:/etc/ansible/roles/common
-            - ./playbook.yml:/etc/ansible/playbooks/playbook.yml
+            - ./playbooks:/etc/ansible/playbooks

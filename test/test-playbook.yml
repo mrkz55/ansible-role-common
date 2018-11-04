@@ -1,0 +1,9 @@
+- hosts: localhost
+  gather_facts: True
+  connection: local
+  tasks:
+
+  - name: Run nginx configuration tasks
+    include_role:
+      name: aws-cli
+      tasks_from: configure.yml

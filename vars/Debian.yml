@@ -3,7 +3,7 @@ __common_packages:
   - curl
   - git
   - python-pip
-  - python-mysqldb
+  - ansible
 
 __common_users:
   - { name: 'www-data', uid: 82, group: 'www-data' }
@@ -13,3 +13,4 @@ __common_groups:
 
 __common_paths:
   - { state: 'directory', path: '/var/www', owner: 'www-data', group: 'www-data', mode: '0755' }
+

@@ -5,6 +5,7 @@ __common_groups:
   - { name: 'www-data', gid: 82 }
 
 __common_packages:
+  - ansible
   - sudo
 
 __common_paths:

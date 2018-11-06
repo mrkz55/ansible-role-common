@@ -6,7 +6,7 @@ __common_groups:
 
 __common_packages:
   - sudo
-
+  - openssh
 __common_pip_packages:
   - ansible
 

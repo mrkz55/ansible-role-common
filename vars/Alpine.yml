@@ -9,7 +9,7 @@ __common_packages:
   - openssh
   - bash
   - ansible
-__common_pip_packages:
+__common_pip_packages: "[]"
 #  - ansible
 
 __common_paths:

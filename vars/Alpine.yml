@@ -8,8 +8,9 @@ __common_packages:
   - sudo
   - openssh
   - bash
-__common_pip_packages:
   - ansible
+__common_pip_packages:
+#  - ansible
 
 __common_paths:
   - { state: 'directory', path: '/var/www', owner: 'www-data', group: 'www-data', mode: '0755' }
